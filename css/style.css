@@ -1,0 +1,564 @@
+@font-face {
+    font-family: 'montserrat_alternatesLtIt';
+    src: url('../fonts/montserratalternates-lightitalic-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-lightitalic-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-medium-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-medium-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-light-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-light-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-italic-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-italic-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-extralightitalic-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-extralightitalic-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-extralight-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-extralight-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-extrabolditalic-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-extrabolditalic-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-extrabold-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-extrabold-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-bold-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-bold-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-bolditalic-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-bolditalic-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-blackitalic-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-blackitalic-webfont.woff') format('woff'),
+        url('../fonts/montserratalternates-black-webfont.woff2') format('woff2'),
+        url('../fonts/montserratalternates-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: #ebebeb;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1240px;
+    width: 1240px;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    position: static;
+}
+
+.logo {}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+}
+
+.menu-list {
+    display: flex;
+}
+
+.list-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.item-link {
+    padding: 10px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.section-title {
+    width: 100vw;
+    height: 105vh;
+    background: url('../img/paralax2.jpg') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.title-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.geniral-title-block {
+    position: relative;
+    top: -100px;
+    width: 60%;
+    padding: 40px;
+    border-radius: 70px;
+    background: #fff;
+    background-color: rgba(0, 0, 255, 0.184);
+    backdrop-filter: blur(10px);
+}
+
+.general-title,
+.general-subtitle {
+    text-align: center;
+    line-height: 110%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 56px;
+    color: #ffc2c2;
+}
+
+.general-subtitle {
+    margin-top: 40px;
+    font-size: 26px;
+    color: #ff9a9a;
+
+}
+
+.section_about-me {
+    position: relative;
+    height: 500px;
+}
+
+.about-me {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -20%;
+    line-height: 150%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 26px;
+    color: #575757;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 25px;
+}
+
+.about-me_title {
+    padding: 15px;
+}
+
+span:not([class]) {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 0%;
+}
+
+.me-content {
+    display: flex;
+}
+
+.content_img-body {}
+
+.me-img {
+    width: 400px;
+    border-radius: 25px;
+}
+.me2-img {
+    width: 600px;
+    border-radius: 25px;
+}
+.content_about-me {
+    padding: 0 15px 10px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content_about-me a {
+    font-size: 15px;
+    text-decoration: underline;
+    text-align: end;
+    display: block;
+}
+
+.me-title {
+    font-size: 20px;
+}
+
+.me-description {
+    font-size: 15px;
+    line-height: 150%;
+}
+
+.about-priject {
+    max-height: 600px;
+    height: 600px;
+    background: url('../img/paralax5.jpg') no-repeat center top;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.content_project-body {
+    background-color: rgba(0, 0, 0, 0.497);
+    backdrop-filter: blur(15px);
+    color: #fff;
+    line-height: 150%;
+    font-family: "Montserrat Alternates", sans-serif;
+    display: flex;
+    padding: 35px;
+    border-radius: 25px;
+}
+
+.body-content_project {
+    width: 70%;
+}
+
+
+.body-img_project {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 70px;
+    top: -100px;
+}
+
+.img_body {
+    border: 3px solid #fff;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.img_body:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.img-project {
+    height: 400px;
+}
+
+.title-project {
+    padding: 25px 0px;
+}
+
+.description-project {}
+
+
+.video-proj {
+    padding: 60px;
+
+}
+
+.video-proj_title {
+    text-align: center;
+    font-size: 36px;
+    font-family: "Montserrat Alternates", sans-serif;
+    margin-bottom: 50px;
+}
+
+.body-video:not(:last-child) {
+    margin-bottom: 50px;
+}
+
+.body-video_content {
+    display: flex;
+    padding: 25px;
+    border-radius: 25px;
+    /* background-color: #c2ffd4; */
+    box-shadow: 0 0 20px #919191;
+}
+
+video {
+    border-radius: 25px;
+}
+
+.video-js[tabindex="-1"] {
+    border-radius: 25px;
+}
+
+.video-description {
+    padding: 25px;
+    padding-left: 50px;
+    font-size: 15px;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.video-description p:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+
+
+.footer {
+    padding: 50px;
+    width: 100vw;
+    background: url('../img/footer.jpg') no-repeat center top;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    color: #fff !important;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer_nav_menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 70px;
+}
+
+.footer_menu-list {
+    display: flex;
+}
+
+.footer_list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+
+.footer_item-link {
+    padding: 10px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #fff;
+    transition: all 0.1s;
+}
+
+.footer_item-link:hover {
+    color: #6c6c6c;
+}
+
+.footer_row:last-child {
+    margin-left: 60px;
+}
+
+.footer_row:last-child .footer_title {
+    font-size: 20px;
+}
+
+.footer_title {
+    margin-bottom: 20px;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.footer_social {
+    margin-top: 25px;
+
+}
+
+.social_list {
+    display: flex;
+}
+
+.social_item {
+    transition: all 0.2s;
+}
+
+.social_item:not(:last-child) {
+    margin-right: 35px;
+
+}
+
+.social_item:hover {
+    transform: scale(1.2);
+
+}
+
+.social_link {
+    color: #fff;
+}
+
+.social_img {
+    width: 24px;
+}
+
+.footer_copirrait {
+    font-size: 10px;
+    margin-top: 30px;
+}
+
+.footer_form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.label_dg {
+    color: rgb(255, 34, 0);
+    font-size: 25px;
+}
+
+.foo_input-body {
+    display: flex;
+}
+
+.footer_label-input {}
+
+.footer_input {
+    flex: 1 1 auto;
+    border: none;
+    padding: 5px 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.footer_input:focus {
+    outline: none;
+    box-shadow: inset 0 0 10px;
+}
+
+#footer_contact-sbmit {
+    padding: 8px 18px;
+    margin-left: -2px;
+    border: none;
+    background-color: #adadad;
+    transition: all 0.2s;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+#footer_contact-sbmit:hover {
+    background-color: #ffc8c8;
+}
+
+/**/
+/* Сховати модальне вікно за замовчуванням */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Стилі для контенту модального вікна */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  text-align: left; /* Вирівнювання тексту по лівій стороні */
+  font-family: "Montserrat Alternates", sans-serif;
+}
+
+/* Закрити кнопку */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Респонсивний контейнер для відео */
+.video-container {
+  position: relative;
+  padding-bottom: 30%; /* 16:9 aspect ratio */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+/* Стилі для опису в модальному вікні */
+.modal-description {
+  margin-top: 20px;
+}
+
